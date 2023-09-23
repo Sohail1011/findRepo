@@ -69,15 +69,15 @@ console.log(finalIndex(numbers)); */
 
 /* --- Reto 8 --- */
 
-const array = [2, 7, 5, 11];
+/* const array = [2, 7, 5, 11];
 
 array.push(9);
 
-console.log(array);
+console.log(array); */
 
 /* --- Reto 9 --- */
 
-function promedioArreglo(array) {
+/* function promedioArreglo(array) {
     if (array.length === 0) {
         return 0;
     }
@@ -92,4 +92,88 @@ function promedioArreglo(array) {
 }
 
 const entrada = [2, 6, 1, 8];
-console.log('Salida: ', promedioArreglo(entrada));
+console.log('Salida: ', promedioArreglo(entrada)); */
+
+/* --- Reto 10 --- */
+
+/* function arrayPares(arreglo) {
+    let suma = 0;
+    for (let i = 0; i < arreglo.length; i++) {
+        if (arreglo[i] % 2 === 0) {
+            suma += arreglo[i];
+        }
+    }
+    return suma;
+}
+
+const numerosEntrada = [1, 2, 5, 8, 9, 12, 2, 3];
+console.log('Salida: ', arrayPares(numerosEntrada)); */
+
+/* --- Reto 11 --- */
+
+/* function booleanoArray(array1, array2) {
+
+    let arrayNuevo = [...array1, ...array2];
+
+    if (arrayNuevo.length >= 10) {
+        return true;
+    }
+    return false;
+}
+
+const urano = [2, 5, 2, 3, 7, 2];
+const saturno = [1, 5, 3, 3];
+
+console.log(booleanoArray(urano, saturno)); */
+
+/* --- Reto 12 --- */
+
+/* function funcionArray(param1, param2) {
+
+    const result = [...param1].map((valor, indice) => valor * 2 + param2[indice] * 2);
+
+    return result;
+}
+
+const arreglo1 = [2, 5, 2];
+const arreglo2 = [1, 5, 3];
+
+console.log(funcionArray(arreglo1, arreglo2)); */
+
+/* --- Reto 13 --- */
+
+/* let personas = [
+    { nombre: 'boris', hobby: 'correr', salario: 2000 },
+    { nombre: 'luis', hobby: 'cantar', salario: 1500 },
+    { nombre: 'carmen', hobby: 'cocinar', salario: 800 },
+    { nombre: 'percy', hobby: 'cantar', salario: 1100 },
+    { nombre: 'rosa', hobby: 'leer', salario: 3000 },
+];
+
+const salarioMayor = personas.find((person) => person.salario > 1200);
+const singPerson = personas.filter((person) => person.hobby === 'cantar');
+const booleanPerson = personas.some((person) => person.hobby === 'leer');
+
+console.log(salarioMayor);
+console.log(singPerson);
+console.log(booleanPerson); */
+
+/* --- Reto 14 --- */
+
+let diasPersonas = [
+    { dia: 'Lunes', persona: 'María' },
+    { dia: 'Martes', persona: 'Luis' },
+    { dia: 'Miércoles', persona: 'Antonia' },
+    { dia: 'Jueves', persona: 'Pedro' },
+    { dia: 'Viernes', persona: 'Marisa' },
+];
+
+let diaConsulta = prompt('Ingrese el día de la consulta');
+let personaConsulta = prompt('Ingrese el nombre de la persona que desea consultar');
+
+const encargoPersona = (param1, param2) => {
+    const result = diasPersonas.find((p) => param1 && param2 === p.dia && p.persona);
+    alert(result);
+}
+
+encargoPersona(diaConsulta, personaConsulta);
